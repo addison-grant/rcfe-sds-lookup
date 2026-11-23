@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chemical Safety Sheets QR Sign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Printable door sign for the SDS lookup site. Letter paper, portrait.
+   The QR code is a static SVG for https://addison-grant.github.io/rcfe-sds-lookup/
+   If the site address ever changes, regenerate the QR code. */
+@page{size:letter portrait;margin:0.5in}
+:root{--ink:#1b1d1f;--soft:#5b6168;--red:#b3261e;--desk:#e9ebee;--desk-ink:#1b1d1f}
+@media(prefers-color-scheme:dark){:root{--desk:#121416;--desk-ink:#eceff1}}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:var(--desk);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif}
+.tools{max-width:7.5in;margin:0 auto;padding:20px 16px 0;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;color:var(--desk-ink);font-size:15px}
+.tools button{font:inherit;font-weight:700;min-height:44px;padding:10px 18px;border-radius:10px;border:2px solid var(--desk-ink);background:var(--desk-ink);color:var(--desk);cursor:pointer}
+.tools button:focus-visible{outline:3px solid #8a5a00;outline-offset:2px}
+.sheet{container-type:inline-size;width:min(7.5in,calc(100% - 32px));aspect-ratio:7.5/9.8;margin:16px auto 32px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);display:flex;overflow:hidden}
+.in{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;padding:5cqi 4cqi}
+h1{margin:0;font-weight:800;line-height:1.08;letter-spacing:-.01em}
+h1 .a{display:block;font-size:7cqi}
+h1 .b{display:block;font-size:5.2cqi;font-weight:700;margin-top:1.6cqi}
+figure{margin:0}
+.qr{display:block;width:80cqi;height:auto;shape-rendering:crispEdges}
+.url{margin:0;font-weight:600;font-size:3cqi;color:var(--soft);overflow-wrap:anywhere}
+.sos{width:100%;border:0.8cqi solid var(--red);border-radius:2.4cqi;padding:2.2cqi 3cqi;display:flex;flex-wrap:wrap;justify-content:center;gap:0.6cqi 6cqi;font-weight:700;font-size:3.8cqi;line-height:1.3;color:var(--ink)}
+.sos span{white-space:nowrap}
+.sos b{color:var(--red);font-weight:800}
+@media print{
+  body{background:#fff}
+  .tools{display:none}
+  .sheet{width:7.5in;height:9.8in;aspect-ratio:auto;margin:0;box-shadow:none;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="tools">
+  <button type="button" onclick="window.print()">Print this sign</button>
+  <span>Letter paper, portrait, 100% scale. Tape it at eye level on the chemical closet door.</span>
+</div>
+<main class="sheet"><div class="in">
+  <h1><span class="a">Chemical safety sheets:</span> <span class="b">scan for first aid and spill steps</span></h1>
+  <figure>
+  <svg class="qr" viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QR code that opens https://addison-grant.github.io/rcfe-sds-lookup/"><path fill="#fff" d="M0 0h49v49h-49z"/><path stroke="#000" d="M4 4.5h7m2 0h1m5 0h1m2 0h1m1 0h6m2 0h1m1 0h3m1 0h7m-41 1h1m5 0h1m3 0h1m2 0h5m3 0h1m3 0h1m2 0h2m4 0h1m5 0h1m-41 1h1m1 0h3m1 0h1m4 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1m2 0h1m2 0h1m3 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m2 0h2m5 0h2m2 0h5m1 0h1m3 0h1m3 0h1m1 0h3m1 0h1m-41 1h1m1 0h3m1 0h1m1 0h2m1 0h1m8 0h1m2 0h1m1 0h3m1 0h3m2 0h1m1 0h3m1 0h1m-41 1h1m5 0h1m4 0h2m1 0h1m4 0h1m4 0h1m3 0h1m2 0h2m1 0h1m5 0h1m-41 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-33 1h1m2 0h1m1 0h1m1 0h1m1 0h3m2 0h3m1 0h2m1 0h3m-30 1h2m2 0h5m2 0h1m1 0h1m1 0h1m1 0h1m1 0h5m2 0h4m1 0h2m1 0h1m-37 1h1m3 0h2m1 0h1m2 0h2m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m3 0h9m1 0h1m1 0h1m-40 1h1m3 0h4m1 0h3m4 0h2m1 0h1m1 0h1m1 0h3m1 0h2m6 0h1m1 0h2m-40 1h2m1 0h1m4 0h1m1 0h1m1 0h2m3 0h1m1 0h4m2 0h1m1 0h2m1 0h1m1 0h1m1 0h1m4 0h1m-38 1h6m2 0h1m2 0h1m2 0h4m1 0h9m1 0h1m1 0h1m3 0h4m-41 1h2m2 0h1m2 0h2m2 0h1m3 0h3m1 0h2m4 0h1m3 0h2m6 0h1m2 0h1m-41 1h2m2 0h4m3 0h1m1 0h1m5 0h1m1 0h1m1 0h2m5 0h1m3 0h2m3 0h2m-41 1h1m4 0h1m1 0h4m5 0h2m2 0h1m6 0h1m2 0h3m1 0h1m1 0h2m-38 1h1m2 0h1m1 0h2m2 0h1m1 0h3m1 0h3m3 0h1m1 0h2m5 0h2m4 0h1m3 0h1m-41 1h1m1 0h1m4 0h2m1 0h1m1 0h2m1 0h2m1 0h3m2 0h2m1 0h2m1 0h2m1 0h2m1 0h1m2 0h1m-38 1h2m1 0h1m1 0h2m1 0h2m2 0h2m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h4m-39 1h2m2 0h1m1 0h1m1 0h1m2 0h3m3 0h3m3 0h3m1 0h1m5 0h2m2 0h1m1 0h1m-39 1h7m1 0h1m1 0h6m1 0h1m2 0h3m2 0h2m1 0h1m2 0h2m2 0h3m-39 1h1m1 0h2m2 0h2m2 0h2m1 0h6m6 0h1m1 0h1m1 0h3m1 0h1m1 0h2m1 0h2m-41 1h1m1 0h1m3 0h2m1 0h1m2 0h2m2 0h4m1 0h3m4 0h3m1 0h2m2 0h4m-38 1h1m1 0h2m1 0h1m1 0h4m1 0h1m5 0h1m1 0h1m1 0h1m7 0h1m2 0h2m3 0h1m-41 1h1m1 0h1m2 0h2m6 0h3m1 0h2m2 0h2m1 0h2m1 0h3m1 0h1m5 0h3m-38 1h1m2 0h1m1 0h2m1 0h1m1 0h5m3 0h1m3 0h6m1 0h2m1 0h1m2 0h2m1 0h1m-41 1h1m2 0h4m2 0h3m1 0h1m1 0h1m2 0h1m2 0h1m2 0h2m4 0h4m2 0h2m1 0h2m-33 1h1m7 0h1m2 0h4m2 0h1m1 0h1m2 0h5m1 0h2m2 0h1m-40 1h2m3 0h1m1 0h1m3 0h8m1 0h3m3 0h1m2 0h2m1 0h5m1 0h2m-40 1h4m2 0h1m3 0h1m3 0h1m1 0h3m4 0h3m4 0h1m2 0h2m-36 1h1m2 0h1m1 0h3m1 0h1m1 0h4m1 0h2m1 0h3m1 0h1m2 0h1m2 0h2m1 0h3m2 0h2m-37 1h2m1 0h1m1 0h1m1 0h1m1 0h2m4 0h1m1 0h1m1 0h1m1 0h2m2 0h4m1 0h1m1 0h2m1 0h2m1 0h1m-40 1h2m1 0h3m1 0h1m2 0h1m1 0h1m2 0h1m2 0h1m2 0h2m1 0h1m1 0h3m1 0h6m1 0h2m-32 1h3m1 0h1m6 0h1m2 0h4m2 0h1m1 0h1m1 0h1m3 0h5m-41 1h7m1 0h1m1 0h1m1 0h1m1 0h3m1 0h2m3 0h2m3 0h2m1 0h2m1 0h1m1 0h2m1 0h1m-40 1h1m5 0h1m3 0h1m3 0h2m3 0h1m1 0h1m1 0h3m4 0h3m3 0h1m2 0h1m-40 1h1m1 0h3m1 0h1m2 0h2m1 0h2m3 0h2m5 0h1m3 0h1m1 0h1m1 0h7m1 0h1m-41 1h1m1 0h3m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m3 0h1m2 0h7m3 0h1m1 0h3m-41 1h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h5m2 0h1m1 0h1m4 0h1m1 0h1m2 0h1m-41 1h1m5 0h1m6 0h2m1 0h1m1 0h1m2 0h2m4 0h1m2 0h1m1 0h1m3 0h1m2 0h1m-40 1h7m2 0h2m1 0h4m2 0h3m1 0h2m1 0h1m1 0h1m2 0h1m1 0h1m6 0h1"/></svg>
+  <figcaption class="url">addison-grant.github.io/rcfe-sds-lookup</figcaption>
+  </figure>
+  <div class="sos"><span>Emergency: <b>911</b></span> <span>Poison Control: <b>1-800-222-1222</b></span></div>
+</div></main>
+</body>
+</html>

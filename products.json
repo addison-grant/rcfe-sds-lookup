@@ -1,0 +1,112 @@
+[
+  {
+    "id": "clorox-regular-bleach",
+    "name": "Clorox Regular Bleach",
+    "maker": "The Clorox Company",
+    "signal": "Danger",
+    "hazards": ["Causes severe skin burns and eye damage"],
+    "firstAid": {
+      "eyes": "Rinse right away with plenty of water, also under the eyelids, for at least 15 minutes. Remove contact lenses if easy to do. Get medical attention right away.",
+      "skin": "Wash off right away with soap and plenty of water while removing contaminated clothes and shoes. Get medical attention right away.",
+      "inhaled": "Move the person to fresh air. Get medical attention if symptoms occur or continue.",
+      "swallowed": "Do NOT induce vomiting. Rinse mouth and drink plenty of water. Never give anything by mouth to an unconscious person. Call Poison Control or a doctor right away."
+    },
+    "ppe": ["Safety glasses with side shields, or goggles", "Protective (impervious) gloves", "Long sleeves; chemical-resistant apron for larger amounts", "Respirator only if irritation occurs or limits are exceeded"],
+    "spill": ["Soak up with sand, earth or another non-combustible absorbent", "Pick up and put in a properly labeled container", "Keep the product and wash water out of drains and sewers", "Dispose of according to local rules; do not reuse empty containers"],
+    "storage": ["Keep tightly closed in a cool, dry, well-ventilated place", "Store locked up, out of reach, away from other materials"],
+    "mixing": ["SDS: incompatible with acids, bases and oxidizers", "Never mix with ammonia cleaners (such as Windex Original), toilet bowl cleaners, rust removers or other cleaners: this can release toxic gas"],
+    "house": "Keep locked in the chemical closet. Never leave a bottle unattended in a resident area.",
+    "sdsDate": "9 Dec 2020",
+    "makerPhone": "1-800-446-1014",
+    "sdsUrl": "https://www.thecloroxcompany.com/wp-content/uploads/2020/12/US001153-Clorox-Regular-Bleach2_3.pdf",
+    "sourceNote": "Summarized from the manufacturer SDS (Clorox Regular Bleach2, US001153). The ammonia/acid mixing line is general bleach safety guidance, not SDS text."
+  },
+  {
+    "id": "lysol-disinfectant-spray",
+    "name": "Lysol Disinfectant Spray (aerosol)",
+    "maker": "Reckitt Benckiser",
+    "signal": "Warning",
+    "hazards": ["Flammable aerosol", "Contains gas under pressure; may explode if heated", "Causes eye irritation"],
+    "firstAid": {
+      "eyes": "Flush right away with plenty of water, lifting the upper and lower eyelids, for at least 10 minutes. Get medical attention if irritation continues.",
+      "skin": "Flush skin with plenty of water. Remove contaminated clothing and shoes.",
+      "inhaled": "Move to fresh air and keep at rest in a position comfortable for breathing.",
+      "swallowed": "Rinse mouth with water. Do not induce vomiting unless medical staff tell you to."
+    },
+    "ppe": ["Chemical splash goggles if spray could reach the eyes", "Chemical-resistant gloves for heavy use", "Use with good ventilation"],
+    "spill": ["Remove sparks, flames and other ignition sources", "Move leaking cans away from the area if safe", "Keep runoff out of drains", "Dispose of unused product through approved waste disposal"],
+    "storage": ["Do not store above 122°F (50°C)", "Keep away from direct sunlight and heat; store dry, cool and ventilated", "Do not puncture or burn the can, even when empty"],
+    "mixing": ["Do not spray near open flame or any ignition source"],
+    "house": "Don’t spray directly near residents, especially anyone with breathing problems; spray, then ventilate the room.",
+    "sdsDate": "21 Sep 2020",
+    "makerPhone": "1-800-338-6167",
+    "sdsUrl": "https://res.cloudinary.com/guest-supply/image/upload/Website/Product%20Documents/0070676-SafetyDataSheet",
+    "sourceNote": "Summarized from the Professional Lysol Disinfectant Spray – All Scents SDS (D0224478 v15.0). That SDS lists “Warning” in section 2 and “DANGER” in section 15; check your can’s label."
+  },
+  {
+    "id": "clorox-disinfecting-wipes",
+    "name": "Clorox Disinfecting Wipes",
+    "maker": "The Clorox Company",
+    "signal": "Caution",
+    "hazards": ["Causes moderate eye irritation (EPA label)", "Do not use or store near heat or open flame"],
+    "firstAid": {
+      "eyes": "Hold eye open and rinse slowly and gently with water for 15–20 minutes. Remove contact lenses after the first 5 minutes, then keep rinsing. Call Poison Control or a doctor.",
+      "skin": "Wash skin with plenty of water. Get medical attention if irritation continues.",
+      "inhaled": "Move to fresh air and keep comfortable for breathing. Get medical advice if unwell.",
+      "swallowed": "Do NOT induce vomiting. If vomiting happens, keep the person leaning forward. Never give anything by mouth to an unconscious person. Call Poison Control or a doctor."
+    },
+    "ppe": ["Not normally required; follow the label", "Gloves and eye protection for large quantities"],
+    "spill": ["Soak up liquid with an absorbent and rinse the surface with water", "Throw used wipes in the trash; do not flush"],
+    "storage": ["Keep tightly closed in a dry, cool, well-ventilated place", "Keep out of reach of children and pets"],
+    "mixing": ["SDS: incompatible with oxidizers and acids (e.g. bleach)"],
+    "house": "Residents with dementia may mistake wipes for food or tissues. Keep canisters out of resident rooms when not in use.",
+    "sdsDate": "22 Aug 2024",
+    "makerPhone": "1-800-446-1014",
+    "sdsUrl": "https://thecloroxcompany.com/wp-content/uploads/2024/09/USA004048-Clorox-Disinfecting-Wipes-Fresh-Scent_1.pdf",
+    "sourceNote": "Summarized from the Clorox Disinfecting Wipes, Fresh Scent SDS (USA004048). The SDS has no GHS signal word; “Caution” is from the EPA label."
+  },
+  {
+    "id": "purell-advanced-gel",
+    "name": "Purell Advanced Hand Sanitizer Gel",
+    "maker": "GOJO Industries",
+    "signal": "Warning",
+    "hazards": ["Flammable liquid and vapor", "Causes serious eye irritation"],
+    "firstAid": {
+      "eyes": "Flush right away with plenty of water for at least 15 minutes. Remove contact lenses if easy to do. Get medical advice.",
+      "skin": "Wash with soap and water as a precaution. Get medical attention if irritation develops and continues.",
+      "inhaled": "Move to fresh air.",
+      "swallowed": "Do NOT induce vomiting. Rinse mouth with water. Get medical attention and call Poison Control."
+    },
+    "ppe": ["None normally required for hand use", "Avoid contact with eyes"],
+    "spill": ["Remove ignition sources and ventilate", "The gel makes floors slippery; keep people away", "Soak up with an inert absorbent and dispose of according to local rules"],
+    "storage": ["Keep tightly closed in a dry, well-ventilated place", "Keep away from heat, sparks and flame"],
+    "mixing": ["SDS: incompatible with oxidizing agents (e.g. bleach)"],
+    "house": "Alcohol gel is a swallowing risk for residents with dementia. Keep refills locked up and watch wall dispensers.",
+    "sdsDate": "5 Mar 2021",
+    "makerPhone": "",
+    "sdsUrl": "https://img.uline.com/is/content/uline/SS-24953pdf",
+    "sourceNote": "Summarized from the PURELL Advanced Hand Sanitizer Gel SDS (400000000422). This SDS lists only CHEMTREC (1-800-424-9300) for emergencies; use Poison Control for exposures."
+  },
+  {
+    "id": "windex-original",
+    "name": "Windex Original Glass Cleaner",
+    "maker": "S.C. Johnson & Son",
+    "signal": "None",
+    "hazards": ["Not classified as hazardous on the SDS"],
+    "firstAid": {
+      "eyes": "SDS lists no special requirements. Rinse with water if irritated.",
+      "skin": "SDS lists no special requirements. Wash off with water.",
+      "inhaled": "SDS lists no special requirements. Move to fresh air if uncomfortable.",
+      "swallowed": "SDS lists no special requirements. Call Poison Control for advice."
+    },
+    "ppe": ["None required", "Wash thoroughly after handling"],
+    "spill": ["Dike large spills and clean up the residue", "Empty bottle can go in the trash or recycling"],
+    "storage": ["Keep container closed when not in use"],
+    "mixing": ["Do not mix with bleach or any other household cleaners", "Incompatible with strong bases"],
+    "house": "",
+    "sdsDate": "25 Feb 2015",
+    "makerPhone": "1-866-231-5406",
+    "sdsUrl": "https://images.homedepot-static.com/catalog/pdfImages/2b/2b819a8d-86c5-42e2-84eb-8096ac392a2c.pdf",
+    "sourceNote": "Summarized from the Windex Original SDS (350000014153, rev. 2015). This is an older revision; check SC Johnson for the current one. The rinse/fresh-air steps are common-sense additions, not SDS text."
+  }
+]

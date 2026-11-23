@@ -1,0 +1,79 @@
+name: Check products.json
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Validate products.json
+        run: |
+          node <<'EOF'
+          const fs = require('fs');
+          const FILE = 'products.json';
+          const SIGNALS = ['Danger', 'Warning', 'Caution', 'None'];
+          const errors = [];
+          const fail = msg => { errors.push(msg); console.log(`::error file=${FILE}::${msg}`); };
+
+          let text;
+          try {
+            text = fs.readFileSync(FILE, 'utf8').replace(/^﻿/, '');
+          } catch (e) {
+            console.log(`::error::${FILE} not found at the repo root`);
+            process.exit(1);
+          }
+
+          let list;
+          try {
+            list = JSON.parse(text);
+          } catch (e) {
+            console.log(`::error file=${FILE}::${FILE} is not valid JSON: ${e.message}`);
+            process.exit(1);
+          }
+
+          if (!Array.isArray(list)) {
+            console.log(`::error file=${FILE}::${FILE} must be a list of products: [ {...}, {...} ]`);
+            process.exit(1);
+          }
+
+          const isBlank = v => v === undefined || v === null || (typeof v === 'string' && v.trim() === '');
+          const seen = new Map();
+
+          list.forEach((p, i) => {
+            const where = `Entry ${i + 1}` + (p && typeof p.name === 'string' && p.name.trim() ? ` ("${p.name}")` : '');
+            if (!p || typeof p !== 'object' || Array.isArray(p)) { fail(`${where} is not an object`); return; }
+
+            for (const key of ['id', 'name', 'signal', 'firstAid']) {
+              if (isBlank(p[key])) fail(`${where} is missing "${key}"`);
+            }
+
+            if (!isBlank(p.id)) {
+              if (typeof p.id !== 'string' || !/^[A-Za-z0-9-]+$/.test(p.id)) {
+                fail(`${where} has id "${p.id}": use only letters, numbers and dashes, or its #p- link will not open`);
+              }
+              if (seen.has(p.id)) fail(`${where} has the same id "${p.id}" as entry ${seen.get(p.id)}`);
+              else seen.set(p.id, i + 1);
+            }
+
+            if (!isBlank(p.signal) && !SIGNALS.includes(p.signal)) {
+              fail(`${where} has signal "${p.signal}": must be exactly one of ${SIGNALS.join(', ')}`);
+            }
+
+            if (!isBlank(p.firstAid) && (typeof p.firstAid !== 'object' || Array.isArray(p.firstAid))) {
+              fail(`${where} has "firstAid" that is not an object with eyes, skin, inhaled, swallowed`);
+            }
+          });
+
+          if (errors.length) {
+            console.log(`\n${errors.length} problem(s) found in ${FILE}.`);
+            process.exit(1);
+          }
+          console.log(`${FILE} OK: ${list.length} products, all ids unique.`);
+          EOF

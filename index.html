@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chemical Safety Sheets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: calm, clinical, readable by a tired caregiver at 2am
+   IDEA: the chemical-closet binder: hazard label on top, tabbed sections
+   PICTURE: the working search + list itself; product page reads like a label
+   COLOUR and TYPE: white ground, charcoal ink, safety red for Danger, amber for Warning; Public Sans
+   LAYOUT: emergency strip, big search, product cards; detail leads with first aid */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#121416);--ink:light-dark(#1b1d1f,#eceff1);--soft:light-dark(#5b6168,#a9b0b7);--line:light-dark(#dfe2e5,#2c3136);--panel:light-dark(#f5f6f7,#1b1f23);--red:light-dark(#b3261e,#ff8a80);--redbg:light-dark(#fdecea,#3a1513);--amb:light-dark(#8a5a00,#ffcc66);--ambbg:light-dark(#fff3d6,#3a2c0c);--acc:light-dark(#1b1d1f,#eceff1)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Public Sans",system-ui,sans-serif;overflow-x:clip}
+.band{padding:clamp(20px,3vw,40px) max(5vw,16px)}
+.wrap{max-width:860px;margin:0 auto}
+.sos{background:var(--red);color:light-dark(#fff,#1b0605);padding:10px max(5vw,16px)}
+.sos .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;font-weight:600}
+.sos a{color:inherit;font-weight:800;white-space:nowrap}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.05;margin:0 0 6px;text-wrap:balance;font-weight:800}
+h2{font-size:22px;line-height:1.2;margin:0 0 10px}
+.sub{color:var(--soft);margin:0 0 18px}
+.bar{display:flex;gap:10px;flex-wrap:wrap}
+input,select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:11px 13px;width:100%}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:3px solid var(--amb);outline-offset:2px}
+#q{flex:1 1 260px;font-size:18px;padding:14px 16px}
+button{font:inherit;font-weight:700;min-height:44px;padding:10px 18px;border-radius:10px;border:2px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer}
+button.ghost{background:transparent;color:var(--ink)}
+button.danger{border-color:var(--red);background:transparent;color:var(--red)}
+.list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;align-items:center;padding:14px 16px;border:2px solid var(--line);border-radius:12px;text-decoration:none;color:inherit;background:var(--bg)}
+.card:hover{border-color:var(--ink)}
+.card b{font-size:18px}
+.card small{color:var(--soft);grid-column:1/2}
+.tag{display:inline-block;font-weight:800;font-size:13px;padding:4px 10px;border-radius:999px;white-space:nowrap;background:var(--panel);color:var(--soft)}
+.tag.Danger{background:var(--redbg);color:var(--red)}.tag.Warning{background:var(--ambbg);color:var(--amb)}
+.empty{padding:28px;border:2px dashed var(--line);border-radius:12px;color:var(--soft);text-align:center;margin-top:18px}
+.label{border:3px solid var(--ink);border-radius:14px;overflow:hidden}
+.label header{padding:18px 20px;border-bottom:3px solid var(--ink)}
+.label header h1{font-size:clamp(26px,5vw,38px)}
+.label header .tag{font-size:15px;margin-top:8px}
+.hz{margin:10px 0 0;padding-left:20px;font-weight:600}
+.sec{padding:18px 20px;border-top:1px solid var(--line)}
+.sec:first-of-type{border-top:0}
+.sec h2{display:flex;gap:10px;align-items:center}
+.sec h2 span{font-size:13px;font-weight:800;background:var(--ink);color:var(--bg);border-radius:6px;padding:2px 8px}
+.fa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fa div{background:var(--panel);border-radius:10px;padding:12px 14px}
+.fa b{display:block;margin-bottom:2px}
+.sec ul{margin:0;padding-left:20px}.sec li{margin:3px 0}
+.house{background:var(--ambbg);border-radius:10px;padding:12px 14px;margin-top:10px}
+.meta{color:var(--soft);font-size:14px}
+.meta a{color:var(--ink);font-weight:700;overflow-wrap:anywhere}
+.top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+form{display:grid;gap:14px}
+label{font-weight:700;display:grid;gap:5px}
+label em{font-weight:400;font-style:normal;color:var(--soft);font-size:14px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.note{font-size:14px;color:var(--soft);margin-top:24px}
+.msg{padding:10px 14px;border-radius:10px;background:var(--panel);margin-top:12px}
+.confirm{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:12px;border-radius:10px;background:var(--redbg)}
+@media(max-width:600px){.fa,.two{grid-template-columns:minmax(0,1fr)}.card{grid-template-columns:minmax(0,1fr)}.card .tag{justify-self:start}}
+@media(prefers-reduced-motion:no-preference){.label,.list{animation:in .18s ease-out}@keyframes in{from{opacity:0;transform:translateY(4px)}}}
+</style>
+</head>
+<body>
+<div class="sos"><div class="wrap">
+  <span>Emergency: <a href="tel:911">911</a></span>
+  <span>Poison Control: <a href="tel:18002221222">1-800-222-1222</a></span>
+</div></div>
+<main class="band"><div class="wrap" id="app"><h1>Chemical safety sheets</h1><p class="sub">Loading products…</p></div></main>
+<script>
+{
+const app = document.getElementById('app');
+let products = [], q = '', status = 'loading';
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const arr = v => Array.isArray(v) ? v.filter(Boolean).map(String) : (v ? String(v).split('\n').map(s=>s.trim()).filter(Boolean) : []);
+const ul = v => { const a = arr(v); return a.length ? '<ul>' + a.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>' : '<p class="meta">Not listed on the SDS.</p>'; };
+const safeUrl = u => /^https?:\/\//i.test(u || '') ? u : '';
+const sig = s => ['Danger','Warning','Caution'].includes(s) ? s : 'None';
+const sigText = s => sig(s) === 'None' ? 'No signal word' : sig(s);
+const idFromHash = () => (location.hash.match(/^#p-([A-Za-z0-9-]+)$/) || [])[1] || null;
+
+function render() {
+  const id = idFromHash();
+  if (id) { const p = products.find(x => x.id === id); if (p) return renderDetail(p); }
+  renderList();
+}
+
+function renderList() {
+  const t = q.trim().toLowerCase();
+  const rows = products.filter(p => !t || [p.name, p.maker, ...(arr(p.hazards))].join(' ').toLowerCase().includes(t))
+    .sort((a, b) => String(a.name).localeCompare(String(b.name)));
+  let body;
+  if (status === 'loading') body = '<div class="empty">Loading the product list…</div>';
+  else if (status === 'offline') body = '<div class="empty">The product list didn’t load. Check your connection and reopen this page. In an emergency, use the paper SDS binder.</div>';
+  else if (!products.length) body = '<div class="empty">No products in the list yet.</div>';
+  else if (!rows.length) body = '<div class="empty">No product matches “' + esc(q) + '”. Check the spelling, or look in the paper SDS binder.</div>';
+  else body = '<ul class="list">' + rows.map(p => '<li><a class="card" href="#p-' + esc(p.id) + '"><b>' + esc(p.name) + '</b><span class="tag ' + sig(p.signal) + '">' + sigText(p.signal) + '</span><small>' + esc(p.maker) + (arr(p.hazards)[0] ? ' · ' + esc(arr(p.hazards)[0]) : '') + '</small></a></li>').join('') + '</ul>';
+  // Keep the search box in place while typing; only the results are redrawn (rebuilding it broke Android keyboards).
+  const res = document.getElementById('results');
+  if (res) { res.innerHTML = body; return; }
+  app.innerHTML = '<h1>Chemical safety sheets</h1><p class="sub">Search a product to see first aid, protective gear, spill cleanup and storage rules.</p>' +
+    '<div class="bar"><input id="q" type="search" placeholder="Search: bleach, wipes, Lysol…" value="' + esc(q) + '" aria-label="Search products">' + '</div><div id="results">' + body + '</div>' +
+    '<p class="note">These summaries come from each manufacturer’s SDS. Keep the full SDS on file, and check it and the product label when they change. If someone is badly hurt, has trouble breathing, or is unresponsive, call 911 first.</p>';
+  document.getElementById('q').addEventListener('input', e => { q = e.target.value; renderList(); });
+}
+
+function renderDetail(p) {
+  const fa = p.firstAid || {};
+  const url = safeUrl(p.sdsUrl);
+  app.innerHTML = '<div class="top"><button class="ghost" id="back">← All products</button>' + '</div>' +
+    '<article class="label"><header><h1>' + esc(p.name) + '</h1><div class="meta">' + esc(p.maker) + '</div><span class="tag ' + sig(p.signal) + '">' + sigText(p.signal) + '</span>' +
+    (arr(p.hazards).length ? '<ul class="hz">' + arr(p.hazards).map(h => '<li>' + esc(h) + '</li>').join('') + '</ul>' : '') + '</header>' +
+    '<section class="sec"><h2><span>1</span>First aid</h2><div class="fa">' +
+      [['Eyes', fa.eyes], ['Skin', fa.skin], ['Breathed in', fa.inhaled], ['Swallowed', fa.swallowed]].map(([k, v]) => '<div><b>' + k + '</b>' + (esc(v) || '<span class="meta">Not listed.</span>') + '</div>').join('') +
+    '</div><p class="meta" style="margin:10px 0 0">Poison Control: 1-800-222-1222' + (p.makerPhone ? ' · Manufacturer medical line: ' + esc(p.makerPhone) : '') + '</p></section>' +
+    '<section class="sec"><h2><span>2</span>Protective gear</h2>' + ul(p.ppe) + '</section>' +
+    '<section class="sec"><h2><span>3</span>Spill cleanup and disposal</h2>' + ul(p.spill) + '</section>' +
+    '<section class="sec"><h2><span>4</span>Storage and mixing</h2>' + ul([...arr(p.storage), ...arr(p.mixing)]) +
+      (p.house ? '<div class="house"><b>House note:</b> ' + esc(p.house) + '</div>' : '') + '</section>' +
+    '<section class="sec meta">SDS ' + (p.sdsDate ? 'dated ' + esc(p.sdsDate) : 'date not recorded') + (url ? ' · <a href="' + esc(url) + '" target="_blank" rel="noopener">Open full SDS</a>' : '') + (p.sourceNote ? '<br>' + esc(p.sourceNote) : '') + '</section></article>';
+  document.getElementById('back').onclick = () => { history.pushState(null, '', location.pathname + location.search); render(); };
+  window.scrollTo(0, 0); // open at the product name and first aid, not wherever the list was scrolled
+}
+
+window.addEventListener('hashchange', render);
+render();
+
+fetch('products.json', { cache: 'no-cache' })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(list => { products = Array.isArray(list) ? list : []; status = 'ready'; render(); })
+  .catch(() => { status = 'offline'; render(); });
+}
+</script>
+</body>
+</html>
