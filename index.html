@@ -61,6 +61,7 @@ label{font-weight:700;display:grid;gap:5px}
 label em{font-weight:400;font-style:normal;color:var(--soft);font-size:14px}
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .note{font-size:14px;color:var(--soft);margin-top:24px}
+.note a{color:var(--ink);font-weight:700}
 .msg{padding:10px 14px;border-radius:10px;background:var(--panel);margin-top:12px}
 .confirm{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:12px;border-radius:10px;background:var(--redbg)}
 @media(max-width:600px){.fa,.two{grid-template-columns:minmax(0,1fr)}.card{grid-template-columns:minmax(0,1fr)}.card .tag{justify-self:start}}
@@ -106,7 +107,8 @@ function renderList() {
   if (res) { res.innerHTML = body; return; }
   app.innerHTML = '<h1>Chemical safety sheets</h1><p class="sub">Search a product to see first aid, protective gear, spill cleanup and storage rules.</p>' +
     '<div class="bar"><input id="q" type="search" placeholder="Search: bleach, wipes, Lysol…" value="' + esc(q) + '" aria-label="Search products">' + '</div><div id="results">' + body + '</div>' +
-    '<p class="note">These summaries come from each manufacturer’s SDS. Keep the full SDS on file, and check it and the product label when they change. If someone is badly hurt, has trouble breathing, or is unresponsive, call 911 first.</p>';
+    '<p class="note">These summaries come from each manufacturer’s SDS. Keep the full SDS on file, and check it and the product label when they change. If someone is badly hurt, has trouble breathing, or is unresponsive, call 911 first.</p>' +
+    '<p class="note"><a href="qr.html">Print the QR code sign</a> for the chemical closet door.</p>';
   document.getElementById('q').addEventListener('input', e => { q = e.target.value; renderList(); });
 }
 
