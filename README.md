@@ -2,6 +2,9 @@
 
 A phone-friendly lookup page for the safety data sheets (SDS) of the chemicals we use. Staff can search a product to see first aid, protective gear, spill cleanup and storage rules, and open the full SDS.
 
+- **Live site:** [addison-grant.github.io/rcfe-sds-lookup](https://addison-grant.github.io/rcfe-sds-lookup/)
+- **Closet-door QR sign to print:** [addison-grant.github.io/rcfe-sds-lookup/qr.html](https://addison-grant.github.io/rcfe-sds-lookup/qr.html)
+
 ## Adding or changing a product
 
 All products live in `products.json`. To add one, copy an existing entry, change the fields, and commit. The site updates a minute or two later.
