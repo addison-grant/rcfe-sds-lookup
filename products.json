@@ -108,5 +108,71 @@
     "makerPhone": "1-866-231-5406",
     "sdsUrl": "https://images.homedepot-static.com/catalog/pdfImages/2b/2b819a8d-86c5-42e2-84eb-8096ac392a2c.pdf",
     "sourceNote": "Summarized from the Windex Original SDS (350000014153, rev. 2015). This is an older revision; check SC Johnson for the current one. The rinse/fresh-air steps are common-sense additions, not SDS text."
+  },
+  {
+    "id": "fabuloso-lemon",
+    "name": "Fabuloso Multi-Purpose Cleaner, Lemon",
+    "maker": "Colgate-Palmolive",
+    "signal": "Warning",
+    "hazards": ["Causes serious eye irritation", "May cause an allergic skin reaction"],
+    "firstAid": {
+      "eyes": "Flush right away with plenty of water, holding the eye wide open and protecting the other eye. Remove contact lenses. If irritation continues, get medical attention.",
+      "skin": "Rinse well with plenty of water. Take off soaked clothing and wash it before it is worn again. If irritation or a rash develops, get medical advice.",
+      "inhaled": "Move the person away from the area. If unconscious, place in the recovery position and get medical help. If symptoms continue, call a doctor.",
+      "swallowed": "Keep the airway clear. Never give anything by mouth to an unconscious person. Call Poison Control for advice; if symptoms continue, call a doctor."
+    },
+    "ppe": ["Protective gloves (it can cause an allergic skin reaction)", "Tight-fitting safety goggles if it could splash; keep an eye-wash bottle of clean water nearby", "Avoid breathing the mist or vapor", "SDS: people with skin allergies, asthma or chronic breathing problems should not work with it"],
+    "spill": ["Wear gloves and eye protection", "Soak up with an inert absorbent (sand, sawdust or absorbent pads) and put it in a closed container", "Keep the product out of drains", "Do not reuse the empty bottle; dispose of according to local rules"],
+    "storage": ["Keep the container tightly closed in a dry, well-ventilated place"],
+    "mixing": ["SDS: no incompatible materials listed", "Do not mix with bleach or other cleaners (general cleaning safety, not SDS text)"],
+    "house": "",
+    "sdsDate": "27 Oct 2025",
+    "makerPhone": "",
+    "sdsUrl": "https://digitalcontent.target.com/vault/1773360000/CLOUD_e4a796fa-2665-4fb8-8b42-82fcc131ab5d.pdf",
+    "sourceNote": "Summarized from Colgate-Palmolive's SDS for Fabuloso 2X Concentrated Lemon (SDS 660000022412, v1.0), copy hosted by Target. Colgate writes it as an industrial SDS; the bottle label covers household use. The older non-concentrated Lemon formula's SDS lists only the skin-allergy hazard. The SDS lists CHEMTREC (1-800-424-9300) for emergencies; use Poison Control for exposures. The Poison Control line under Swallowed is a common-sense addition, not SDS text."
+  },
+  {
+    "id": "dawn-ultra-original",
+    "name": "Dawn Ultra Dish Soap, Original",
+    "maker": "Procter & Gamble",
+    "signal": "Warning",
+    "hazards": ["Causes eye irritation", "Combustible liquid"],
+    "firstAid": {
+      "eyes": "Rinse carefully with plenty of water for several minutes. Remove contact lenses if easy to do, then keep rinsing. Get medical attention right away if irritation continues.",
+      "skin": "Rinse with plenty of water. Get medical attention if irritation develops and continues.",
+      "inhaled": "Move to fresh air. If symptoms continue, call a doctor.",
+      "swallowed": "Rinse mouth, then drink 1 or 2 glasses of water. Do NOT induce vomiting. Get medical attention right away if symptoms occur."
+    },
+    "ppe": ["None required for normal household use", "Wash hands after handling"],
+    "spill": ["Stop the leak if safe to do so", "Soak up with sand, earth or another non-combustible absorbent and put it in a container", "Never pour spilled product back into the bottle", "Dispose of according to local rules", "Spilled soap is very slippery; keep residents away until the floor is clean and dry (common sense, not SDS text)"],
+    "storage": ["Keep the container closed when not in use", "Store in a cool, dry, well-ventilated place away from heat, sparks and open flame", "Keep out of reach of children"],
+    "mixing": ["SDS: no incompatible products known"],
+    "house": "",
+    "sdsDate": "13 Nov 2018",
+    "makerPhone": "",
+    "sdsUrl": "https://zoro.com/static/cms/enhanced_pdf/Essendant%20Inc_PGC91064EAxxSDS.pdf",
+    "sourceNote": "Summarized from P&G's SDS for Dawn Ultra Original (91931667_RET_NG, v1.01), copy hosted by Zoro. P&G provides it as a courtesy for a consumer product. This 2018 revision was the newest available online in Nov 2026; ask P&G (pgsds.im@pg.com) for the current one. The SDS lists CHEMTREC (1-800-424-9300) for emergencies; use Poison Control for exposures."
+  },
+  {
+    "id": "ensueno-naturals-fresh-bamboo",
+    "name": "Ensueño Naturals Fabric Softener, Fresh Bamboo",
+    "maker": "Industrias AlEn (AlEn USA)",
+    "signal": "Warning",
+    "hazards": ["Causes eye irritation"],
+    "firstAid": {
+      "eyes": "Hold the eye open and rinse slowly and gently with water for 15–20 minutes, until no product remains. Remove contact lenses if needed. Get medical attention if irritation develops or continues.",
+      "skin": "SDS: not a skin irritant. If it splashes, wash the area with plenty of water and soap or mild detergent until no product remains.",
+      "inhaled": "SDS: not a breathing irritant. Move to fresh air if uncomfortable.",
+      "swallowed": "Do NOT induce vomiting. Have the person drink plenty of water and get medical attention. Call Poison Control or a doctor for treatment advice."
+    },
+    "ppe": ["Safety glasses and gloves (SDS rating B)", "Avoid contact with eyes; wash hands after handling"],
+    "spill": ["Small spills: wash the area with plenty of water", "Large spills: wear gloves, goggles and boots; soak up with sand or sawdust and collect in closed containers", "Keep heat, sparks and open flame away", "Dispose of according to local rules; do not reuse empty containers", "Spilled softener is slippery; keep residents away until the floor is clean and dry (common sense, not SDS text)"],
+    "storage": ["Keep out of reach of children; keep the container closed when not in use", "Store in a cool, dry, well-ventilated area away from heat, sparks or open flame", "Keep from freezing"],
+    "mixing": ["SDS: may react with strong oxidizers (e.g. bleach) and other cleaning products; do not mix"],
+    "house": "",
+    "sdsDate": "14 Mar 2019",
+    "makerPhone": "",
+    "sdsUrl": "https://www.alenusa.com/wp-content/uploads/2020/08/SDS-FP6050556-ensueno-Naturals-Fresh-Bamboo.pdf",
+    "sourceNote": "Summarized from AlEn's SDS for Ensueño Naturals Fresh Bamboo (FP-6050556 Rev. 1). Its next revision was due Mar 2021; ask AlEn USA for the current one. Each Ensueño scent has its own SDS and they differ (AlEn's Ensueño Baby SDS is labeled Danger), so check that your bottle says Fresh Bamboo. The SDS lists CHEMTREC (1-800-424-9300) for emergencies; use Poison Control for exposures. The fresh-air step and slippery-floor line are common-sense additions, not SDS text."
   }
 ]

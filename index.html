@@ -93,8 +93,9 @@ function render() {
 }
 
 function renderList() {
-  const t = q.trim().toLowerCase();
-  const rows = products.filter(p => !t || [p.name, p.maker, ...(arr(p.hazards))].join(' ').toLowerCase().includes(t))
+  const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); // "ensueno" finds "Ensueño"
+  const t = fold(q.trim());
+  const rows = products.filter(p => !t || fold([p.name, p.maker, ...(arr(p.hazards))].join(' ')).includes(t))
     .sort((a, b) => String(a.name).localeCompare(String(b.name)));
   let body;
   if (status === 'loading') body = '<div class="empty">Loading the product list…</div>';
